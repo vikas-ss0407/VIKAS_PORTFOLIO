@@ -1,18 +1,25 @@
+import sriEshwarLogo from '../assets/images/srieshwar.png';
+import changaviLogo from '../assets/images/changavi.jpeg';
+
 export const education = [
   {
-    school: 'University of Technology',
-    degree: 'Bachelor of Science in Computer Science',
-    field: 'Computer Science',
-    year: '2020 - 2024',
-    description: 'Specialized in software engineering and web development. Built several full-stack projects and contributed to open-source initiatives.',
-    achievements: ['GPA: 3.8/4.0', 'Dean\'s List', 'Web Development Award'],
+    school: 'Sri Eshwar College of Engineering',
+    degree: 'BE., Electronics and Communication Engineering',
+    field: 'Electronics and Communication Engineering',
+    year: '2023 - 2027',
+    grade: '7.5 CGPA',
+    description: 'Pursuing Bachelor of Engineering in Electronics and Communication Engineering with focus on modern communication systems and signal processing.',
+    achievements: ['CGPA: 7.5/10', 'Active in technical clubs', 'Participation in hackathons'],
+    logo: sriEshwarLogo,
   },
   {
-    school: 'Institute of Advanced Learning',
-    degree: 'Diploma in Web Development',
-    field: 'Web Technologies',
-    year: '2019 - 2020',
-    description: 'Intensive certification program focusing on modern frontend and backend technologies including React, Node.js, and database design.',
-    achievements: ['Top 10% of cohort', 'Capstone Project: E-commerce Platform'],
+    school: 'Changavi Vidhyaa Mandhir Matriculation Hr Sec School',
+    degree: 'XII - Bio-Maths',
+    field: 'Bio-Mathematics',
+    year: '2022 - 2023',
+    grade: '74.5%',
+    description: 'Completed higher secondary education with a focus on Biology and Mathematics, building a strong foundation in analytical and scientific thinking.',
+    achievements: ['Score: 74.5%', 'Biology and Mathematics specialization'],
+    logo: changaviLogo,
   },
 ];

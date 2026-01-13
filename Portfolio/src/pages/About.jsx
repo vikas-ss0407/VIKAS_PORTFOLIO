@@ -1,103 +1,73 @@
+import { useState, useEffect } from 'react';
 import SocialLinks from '../components/SocialLinks';
+import profileImage from '../assets/images/profile.png';
 
 function About() {
+	const [displayText, setDisplayText] = useState('');
+	const [isDeleting, setIsDeleting] = useState(false);
+	const fullText = 'Full Stack Developer';
+	const typingSpeed = 150;
+	const deletingSpeed = 50;
+	const pauseTime = 4000;
+
+	useEffect(() => {
+		let timeout;
+
+		if (!isDeleting && displayText === fullText) {
+			timeout = setTimeout(() => setIsDeleting(true), pauseTime);
+		} else if (isDeleting && displayText === '') {
+			setIsDeleting(false);
+		} else if (isDeleting) {
+			timeout = setTimeout(() => {
+				setDisplayText(fullText.substring(0, displayText.length - 1));
+			}, deletingSpeed);
+		} else {
+			timeout = setTimeout(() => {
+				setDisplayText(fullText.substring(0, displayText.length + 1));
+			}, typingSpeed);
+		}
+
+		return () => clearTimeout(timeout);
+	}, [displayText, isDeleting]);
+
 	return (
-		<section id="about" className="scroll-mt-24 space-y-6">
-			{/* Hero Section with Photo */}
-			<div className="glass-panel relative overflow-hidden rounded-3xl px-6 py-10 sm:px-10 lg:px-12">
+		<section id="about" className="scroll-mt-24">
+			<div className="glass-panel relative overflow-hidden rounded-2xl sm:rounded-3xl px-4 py-8 sm:px-10 lg:px-12 sm:py-10">
 				<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-indigo-500/5 to-transparent" aria-hidden />
-				<div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-					{/* Left Content */}
-					<div className="max-w-2xl space-y-4">
-						<p className="text-xs uppercase tracking-[0.25em] text-cyan-300">About Me</p>
-						<h1 className="text-4xl font-bold leading-tight text-slate-50 sm:text-5xl">
-							Hi, I am Vikas. I build thoughtful web experiences that balance polish with performance.
-						</h1>
-						<p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-							Full-stack developer focused on React, modern CSS, and resilient backend APIs. I love fast feedback loops, clean DX, and shipping impactful products.
+				<div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+					<div className="order-2 lg:order-1 space-y-4 sm:space-y-6 text-center lg:text-left">
+					<h1 className="text-4xl text-white sm:text-5xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-indigo-200 to-cyan-100 animate-slideIn animate-glow">
+						Hi, I am Vikas
+					</h1>
+					<div className="space-y-3 leading-relaxed text-slate-300">
+						<p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cyan-300 break-words whitespace-normal min-h-[1.5em]">
+							I am a {displayText}
+							<span className="animate-pulse">|</span>
 						</p>
-						<div className="flex flex-wrap items-center gap-4">
+						<p className="text-sm sm:text-base">Experienced across frontend and backend, I design maintainable systems, care about performance, and keep accessibility in mind.</p>
+						</div>
+						<div className="flex flex-wrap items-center gap-3 sm:gap-4">
 							<a
-								href="#projects"
-								className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-xl shadow-cyan-500/30 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+								href="/resume.pdf"
+								target="_blank"
+								rel="noreferrer"
+								className="rounded-full border border-cyan-400/60 px-5 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold text-cyan-200 transition hover:bg-cyan-400/10 hover:-translate-y-0.5 active:translate-y-0"
 							>
-								View Projects
+								View Resume
 							</a>
-							<a
-								href="#contact"
-								className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/60 hover:-translate-y-0.5"
-							>
-								Contact Me
-							</a>
+						</div>
+						<div className="pt-2">
+							<SocialLinks variant="compact" />
 						</div>
 					</div>
 
-					{/* Right Side - Photo & Info Box */}
-					<div className="mt-6 flex w-full flex-col items-start gap-4 lg:mt-0 lg:max-w-sm">
-						{/* Profile Photo */}
-						<div className="relative w-full overflow-hidden rounded-2xl border-2 border-cyan-400/30 aspect-square">
+					<div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+						<div className="relative w-60 sm:w-72 lg:w-80 aspect-square overflow-hidden rounded-full border-2 border-cyan-400/40 bg-white shadow-2xl shadow-cyan-500/20">
 							<img
-								src="/images/profile.jpg"
-								alt="Vikas Kumar - Product Engineer"
-								className="h-full w-full object-cover"
-								onError={(e) => {
-									e.target.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23334155%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2248%22 fill=%22%2394a3b8%22 font-family=%22sans-serif%22%3EAdd Your Photo%3C/text%3E%3C/svg%3E';
-								}}
+								src={profileImage}
+								alt="Vikas - Product Engineer"
+								className="h-full w-full object-contain"
 							/>
-						</div>
-
-						{/* Highlights Box */}
-						<div className="w-full space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5">
-							<p className="text-sm font-semibold text-slate-50">Highlights</p>
-							<ul className="space-y-3 text-sm text-slate-300">
-								<li>• 4+ years building React interfaces</li>
-								<li>• Led migrations to Vite + Tailwind</li>
-								<li>• Comfortable with design handoff and Figma</li>
-								<li>• Mentor for junior engineers</li>
-							</ul>
-						</div>
-
-						{/* Currently Exploring Box */}
-						<div className="w-full space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5">
-							<p className="text-sm font-semibold text-slate-200">Currently exploring</p>
-							<ul className="space-y-3 text-sm text-slate-300">
-								<li>• Animations with Framer Motion</li>
-								<li>• High-signal dashboards with real-time data</li>
-								<li>• Accessible, keyboard-first navigation patterns</li>
-							</ul>
-						</div>
-
-						{/* Social Links */}
-						<div className="w-full">
-							<SocialLinks variant="full" />
-						</div>
-					</div>
-				</div>
-			</div>
-
-			{/* Detailed About Section */}
-			<div className="glass-panel grid gap-8 rounded-3xl p-8 lg:grid-cols-2">
-				<div className="space-y-4 text-base leading-relaxed text-slate-300">
-					<h2 className="text-2xl font-semibold text-slate-50">A builder with product instincts</h2>
-					<p>
-						I create digital products that feel purposeful and fast. With a background in frontend craft and a curiosity for backend systems, I can ship end-to-end features that balance user delight with maintainable code.
-					</p>
-					<p>
-						My approach combines rapid iteration, thoughtful UI states, and sensible performance budgets. I care about accessibility, predictable architecture, and leaving teams with clear documentation.
-					</p>
-				</div>
-				<div className="space-y-6">
-					<div>
-						<h3 className="text-lg font-semibold text-slate-50 mb-3">Experience</h3>
-						<div className="space-y-4 text-sm text-slate-300">
-							<div className="border-l-2 border-cyan-400/50 pl-4">
-								<p className="font-semibold text-slate-100">Senior Frontend Engineer</p>
-								<p className="text-slate-400">Tech Company • 2022 - Present</p>
-							</div>
-							<div className="border-l-2 border-indigo-400/50 pl-4">
-								<p className="font-semibold text-slate-100">Full-Stack Developer</p>
-								<p className="text-slate-400">Startup • 2020 - 2022</p>
-							</div>
 						</div>
 					</div>
 				</div>
