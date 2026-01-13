@@ -5,6 +5,8 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Education from './pages/Education';
+import Certifications from './pages/Certifications';
+import Trainings from './pages/Trainings';
 import Contact from './pages/Contact';
 
 function App() {
@@ -14,8 +16,10 @@ function App() {
         <Navbar />
         <main className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-16 pt-8 sm:px-10 lg:px-12">
           <About />
-          <Projects />
           <Skills />
+          <Projects />
+          <Certifications />
+          <Trainings />
           <Education />
           <Contact />
         </main>
