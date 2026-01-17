@@ -1,7 +1,7 @@
 const links = [
 	{
 		label: 'LinkedIn',
-		href: 'https://www.linkedin.com/',
+		href: 'https://www.linkedin.com/in/vikasss0407',
 		icon: (
 			<svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
 				<path
@@ -13,7 +13,7 @@ const links = [
 	},
 	{
 		label: 'GitHub',
-		href: 'https://github.com/',
+		href: 'https://github.com/vikas-ss0407',
 		icon: (
 			<svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
 				<path
@@ -24,8 +24,15 @@ const links = [
 		),
 	},
 	{
+		label: 'LeetCode',
+		href: 'https://leetcode.com/u/vikasss0407/',
+		icon: (
+			<img src="/src/assets/images/leetcode.png" alt="LeetCode" className="h-5 w-5 rounded-full" />
+		),
+	},
+	{
 		label: 'Email',
-		href: 'mailto:hello@example.com',
+		href: 'vikasss0407@gmail.com',
 		icon: (
 			<svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
 				<path
