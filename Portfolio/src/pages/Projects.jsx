@@ -17,10 +17,17 @@ function Projects() {
 					<ProjectCard
 						key={project.title}
 						title={project.title}
+						year={project.year}
+						subtitle={project.subtitle}
+						preview={project.preview}
 						description={project.description}
-						technologies={project.technologies}
-						link={project.link}
-						repo={project.repo}
+						frontend={project.frontend}
+						backend={project.backend}
+						database={project.database}
+						hardware={project.hardware}
+						aiModel={project.aiModel}
+						features={project.features}					image={project.image}						liveLink={project.liveLink}
+						githubLink={project.githubLink}
 					/>
 				))}
 			</div>

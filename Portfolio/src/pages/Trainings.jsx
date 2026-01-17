@@ -51,6 +51,22 @@ function Trainings() {
 										))}
 									</div>
 								)}
+
+								{training.certificateLink && (
+									<div className="pt-3">
+										<a
+											href={training.certificateLink}
+											target="_blank"
+											rel="noreferrer"
+											className="inline-flex items-center gap-2 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 transition hover:bg-indigo-500/30 hover:border-indigo-400/50"
+										>
+											<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+											</svg>
+											View Certificate
+										</a>
+									</div>
+								)}
 							</div>
 						</div>
 					</div>
