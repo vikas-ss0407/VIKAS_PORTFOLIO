@@ -27,17 +27,12 @@ const links = [
 		label: 'LeetCode',
 		href: 'https://leetcode.com/u/vikasss0407/',
 		icon: (
-			<svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-				<path
-					fill="currentColor"
-					d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226a1.2 1.2 0 0 0-.16 1.606l5.356 7.257-2.08 3.829a1.2 1.2 0 0 0 1.634 1.534l3.58-6.573a1.2 1.2 0 0 0 0-1.22L10.5 7.428l2.116-3.094a1.2 1.2 0 0 0-.133-1.606zm6.697 11.66c-.681.264-1.611.228-2.42-.perform-.787-.276-1.486-.568-2.1-.97l-.049-.028c-.025-.013-.049-.030-.075-.045-.125-.055-.245-.11-.358-.159H9.627a1.2 1.2 0 0 0 0 2.4h4.352a1.2 1.2 0 0 1 0 2.4H8.427a1.2 1.2 0 0 0 0 2.4h5.552a1.2 1.2 0 0 1 0 2.4H7.227a1.2 1.2 0 0 0 0 2.4h6.2z"
-				/>
-			</svg>
+			<img src="/src/assets/images/leetcode.png" alt="LeetCode" className="h-5 w-5 rounded-full" />
 		),
 	},
 	{
 		label: 'Email',
-		href: 'mailto:hello@example.com',
+		href: 'vikasss0407@gmail.com',
 		icon: (
 			<svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
 				<path

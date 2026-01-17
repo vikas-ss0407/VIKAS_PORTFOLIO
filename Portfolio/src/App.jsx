@@ -11,8 +11,24 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="bg-[radial-gradient(circle_at_20%_20%,rgba(94,234,212,0.08),transparent_25%),radial-gradient(circle_at_80%_0%,rgba(129,140,248,0.08),transparent_20%),radial-gradient(circle_at_50%_80%,rgba(248,113,113,0.08),transparent_22%)]">
+    <div className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden">
+      {/* Animated orbital particle system */}
+      <div className="blob">
+        <div className="blob-1"></div>
+        <div className="blob-2"></div>
+        <div className="blob-3"></div>
+        <div className="blob-4"></div>
+        <div className="blob-5"></div>
+      </div>
+      
+      {/* Gradient animation layer */}
+      <div className="animated-bg"></div>
+      
+      {/* Grid overlay */}
+      <div className="animated-grid"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(94,234,212,0.08),transparent_25%),radial-gradient(circle_at_80%_0%,rgba(129,140,248,0.08),transparent_20%),radial-gradient(circle_at_50%_80%,rgba(248,113,113,0.08),transparent_22%)]">
         <Navbar />
         <main className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-16 pt-8 sm:px-10 lg:px-12">
           <About />

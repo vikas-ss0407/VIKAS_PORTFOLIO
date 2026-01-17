@@ -67,6 +67,7 @@ export const projects = [
 			'Receipt printing functionality',
 			'Secure JWT authentication'
 		],
+		image: '/src/assets/images/projects/retailpos.png',
 		liveLink: '',
 		githubLink: '',
 	},
@@ -89,6 +90,7 @@ export const projects = [
 			'Web vulnerability protection',
 			'Attendance history and analytics'
 		],
+		image: '/src/assets/images/projects/attendance tracking.png',
 		liveLink: '',
 		githubLink: '',
 	},

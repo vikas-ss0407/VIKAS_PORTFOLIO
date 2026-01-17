@@ -13,7 +13,7 @@ function Footer() {
 				</div>
 				<div className="flex flex-col gap-2 border-t border-white/5 pt-3 sm:pt-4 sm:flex-row sm:items-center sm:justify-between">
 					<p className="text-xs uppercase tracking-[0.25em] text-slate-500">Crafted with React & Tailwind</p>
-					<p className="text-xs sm:text-sm text-slate-400">© {new Date().getFullYear()} Vikas Kumar. All rights reserved.</p>
+					<p className="text-xs sm:text-sm text-slate-400">© {new Date().getFullYear()} Vikas. All rights reserved.</p>
 				</div>
 			</div>
 		</footer>
