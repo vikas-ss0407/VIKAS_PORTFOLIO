@@ -44,14 +44,14 @@ function About() {
 							I am a {displayText}
 							<span className="animate-pulse">|</span>
 						</p>
-						<p className="text-sm sm:text-base">Experienced across frontend and backend, I design maintainable systems, care about performance, and keep accessibility in mind.</p>
+						<p className="text-base sm:text-lg">Experienced across frontend and backend, I design maintainable systems, care about performance, and keep accessibility in mind.</p>
 						</div>
 						<div className="flex flex-wrap items-center gap-3 sm:gap-4">
 							<a
 								href="https://drive.google.com/drive/folders/1LpuTCFxE9I5w0PNlwnrciKQVH3N3jSLQ?usp=drive_link"
 								target="_blank"
 								rel="noreferrer"
-								className="rounded-full border border-cyan-400/60 px-5 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold text-cyan-200 transition hover:bg-cyan-400/10 hover:-translate-y-0.5 active:translate-y-0"
+								className="rounded-full border border-cyan-400/60 px-5 sm:px-6 py-2.5 text-sm sm:text-base font-semibold text-cyan-200 transition hover:bg-cyan-400/10 hover:-translate-y-0.5 active:translate-y-0"
 							>
 								View Resume
 							</a>

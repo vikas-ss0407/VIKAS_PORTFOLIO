@@ -7,14 +7,14 @@ function Skills() {
 			<div className="flex items-center gap-2 sm:gap-3">
 				<div className="h-8 sm:h-10 w-1 sm:w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-indigo-500" aria-hidden />
 				<div>
-					<p className="text-xs uppercase tracking-[0.25em] text-cyan-300">Skills</p>
-					<h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Tools and strengths</h2>
+				<p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Skills</p>
+				<h2 className="text-3xl sm:text-4xl font-semibold text-slate-50">Tools and strengths</h2>
 				</div>
 			</div>
 
 			<div className="grid gap-3 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 				<div className="glass-panel rounded-xl sm:rounded-2xl p-4 sm:p-6">
-					<h3 className="text-base sm:text-lg font-semibold text-slate-50">Programming Languages</h3>
+					<h3 className="text-lg sm:text-xl font-semibold text-slate-50">Programming Languages</h3>
 					<div className="mt-3 sm:mt-4 flex flex-wrap gap-2">
 						{skills.languages.map((item) => (
 							<SkillBadge key={typeof item === 'string' ? item : item.name} skill={item} />

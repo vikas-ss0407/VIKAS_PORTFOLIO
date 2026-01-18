@@ -11,8 +11,8 @@ function Certifications() {
 			<div className="flex items-center gap-2 sm:gap-3">
 				<div className="h-8 sm:h-10 w-1 sm:w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-indigo-500" aria-hidden />
 				<div>
-					<p className="text-xs uppercase tracking-[0.25em] text-cyan-300">Certifications</p>
-					<h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Professional Certifications</h2>
+				<p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Certifications</p>
+				<h2 className="text-3xl sm:text-4xl font-semibold text-slate-50">Professional Certifications</h2>
 				</div>
 			</div>
 
@@ -21,7 +21,7 @@ function Certifications() {
 					<div key={index} className="group w-full glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 border-t-4 border-cyan-400/60 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all flex flex-col">
 						<div className="space-y-1 flex-grow">
 							<div>
-								<h3 className="text-xs sm:text-sm font-semibold text-slate-50 line-clamp-2">{cert.title}</h3>
+								<h3 className="text-sm sm:text-base font-semibold text-slate-50 line-clamp-2">{cert.title}</h3>
 								<p className="text-xs text-slate-400">{cert.date}</p>
 							</div>
 							
@@ -64,7 +64,7 @@ function Certifications() {
 				<div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
 					<div className="bg-slate-900 rounded-lg sm:rounded-xl border border-cyan-400/30 max-w-4xl max-h-[90vh] overflow-y-auto w-full">
 						<div className="sticky top-0 bg-slate-900 border-b border-cyan-400/30 p-4 sm:p-6 flex items-center justify-between">
-							<h3 className="text-xl sm:text-2xl font-semibold text-slate-50">All Certifications</h3>
+							<h3 className="text-2xl sm:text-3xl font-semibold text-slate-50">All Certifications</h3>
 							<button
 								onClick={() => setShowModal(false)}
 								className="text-slate-400 hover:text-slate-50 transition-colors text-2xl"

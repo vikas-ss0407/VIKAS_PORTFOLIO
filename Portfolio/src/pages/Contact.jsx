@@ -6,7 +6,7 @@ function Contact() {
 					Vikas
 				</h2>
 				
-				<p className="text-xl sm:text-2xl text-slate-200">
+				<p className="text-2xl sm:text-3xl text-slate-200">
 					Get in touch !!
 				</p>
 				

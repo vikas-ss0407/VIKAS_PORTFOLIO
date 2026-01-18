@@ -6,8 +6,8 @@ function Trainings() {
 			<div className="flex items-center gap-2 sm:gap-3">
 				<div className="h-8 sm:h-10 w-1 sm:w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-indigo-500" aria-hidden />
 				<div>
-					<p className="text-xs uppercase tracking-[0.25em] text-cyan-300">Trainings</p>
-					<h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Internships & Trainings</h2>
+				<p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Trainings</p>
+				<h2 className="text-3xl sm:text-4xl font-semibold text-slate-50">Internships & Trainings</h2>
 				</div>
 			</div>
 
@@ -28,9 +28,9 @@ function Trainings() {
 							)}
 							<div className="flex-1 space-y-2">
 								<div>
-									<h3 className="text-base sm:text-lg font-semibold text-slate-50">{training.title}</h3>
-									<p className="text-xs sm:text-sm font-medium text-indigo-300">{training.company}</p>
-									<p className="text-xs text-slate-400">{training.date}</p>
+							<h3 className="text-lg sm:text-xl font-semibold text-slate-50">{training.title}</h3>
+							<p className="text-sm sm:text-base font-medium text-indigo-300">{training.company}</p>
+							<p className="text-sm text-slate-400">{training.date}</p>
 									{training.type && (
 										<span className="inline-block mt-1 text-xs px-2 py-0.5 rounded-full bg-indigo-400/10 text-indigo-300 border border-indigo-400/30">
 											{training.type}
@@ -39,7 +39,7 @@ function Trainings() {
 								</div>
 
 								{training.description && (
-									<p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{training.description}</p>
+									<p className="text-sm sm:text-base text-slate-300 leading-relaxed">{training.description}</p>
 								)}
 
 								{training.skills && training.skills.length > 0 && (
@@ -58,7 +58,7 @@ function Trainings() {
 											href={training.certificateLink}
 											target="_blank"
 											rel="noreferrer"
-											className="inline-flex items-center gap-2 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 transition hover:bg-indigo-500/30 hover:border-indigo-400/50"
+											className="inline-flex items-center gap-2 px-3 py-2 text-sm sm:text-base font-semibold rounded-lg bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 transition hover:bg-indigo-500/30 hover:border-indigo-400/50"
 										>
 											<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

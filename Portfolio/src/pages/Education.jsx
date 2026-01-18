@@ -6,8 +6,8 @@ function Education() {
 			<div className="flex items-center gap-2 sm:gap-3">
 				<div className="h-8 sm:h-10 w-1 sm:w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-indigo-500" aria-hidden />
 				<div>
-					<p className="text-xs uppercase tracking-[0.25em] text-cyan-300">Education</p>
-					<h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Learning Journey</h2>
+				<p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Education</p>
+				<h2 className="text-3xl sm:text-4xl font-semibold text-slate-50">Learning Journey</h2>
 				</div>
 			</div>
 
@@ -27,10 +27,10 @@ function Education() {
 								</div>
 							)}
 							<div>
-								<h3 className="text-lg sm:text-xl font-semibold text-slate-50">{edu.degree}</h3>
-								<p className="text-xs sm:text-sm font-medium text-cyan-300">{edu.school}</p>
-								<p className="text-xs sm:text-sm text-slate-400">{edu.year}</p>
-								{edu.grade && <p className="text-xs sm:text-sm font-semibold text-green-400">Grade: {edu.grade}</p>}
+						<h3 className="text-xl sm:text-2xl font-semibold text-slate-50">{edu.degree}</h3>
+						<p className="text-sm sm:text-base font-medium text-cyan-300">{edu.school}</p>
+						<p className="text-sm sm:text-base text-slate-400">{edu.year}</p>
+								{edu.grade && <p className="text-sm sm:text-base font-semibold text-green-400">Grade: {edu.grade}</p>}
 							</div>
 						</div>
 					</div>
