@@ -12,14 +12,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden">
-      {/* Animated orbital particle system */}
-      <div className="blob">
-        <div className="blob-1"></div>
-        <div className="blob-2"></div>
-        <div className="blob-3"></div>
-        <div className="blob-4"></div>
-        <div className="blob-5"></div>
-      </div>
+      {/* Removed orbital particle system (ball animation) */}
       
       {/* Gradient animation layer */}
       <div className="animated-bg"></div>
