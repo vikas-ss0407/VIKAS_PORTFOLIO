@@ -4,17 +4,18 @@ import logo from '../assets/images/logoportfolio.png';
 
 const navLinks = [
 	{ href: '#about', label: 'About' },
-	{ href: '#projects', label: 'Projects' },
 	{ href: '#skills', label: 'Skills' },
+	{ href: '#projects', label: 'Projects' },
+	{ href: '#certifications', label: 'Certificates' },
+	{ href: '#trainings', label: 'Experience' },
 	{ href: '#education', label: 'Education' },
-	{ href: '#contact', label: 'Contact' },
 ];
 
 function Navbar() {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className="sticky top-0 z-40 border-b border-white/5 bg-slate-950/70 backdrop-blur-xl">
+		<header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-slate-950/80 backdrop-blur-lg transition-all duration-300">
 			<div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-10 lg:px-12">
 				<div className="flex items-center gap-2 sm:gap-3">
 					<img src={logo} alt="Portfolio Logo" className="h-8 w-8 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl object-contain" />

@@ -122,6 +122,21 @@ function ProjectCard({ title, year, subtitle, preview, description, frontend, ba
 								</p>
 							</div>
 
+							{/* Features (placed before tech stack as requested) */}
+							{features && features.length > 0 && (
+								<div className="border-t border-white/10 pt-4 sm:pt-5">
+									<h3 className="text-sm font-semibold text-slate-100 mb-3">Features:</h3>
+									<ul className="space-y-2">
+										{features.map((feature, index) => (
+											<li key={index} className="flex gap-2 text-sm text-slate-300">
+												<span className="text-cyan-400 flex-shrink-0">•</span>
+												<span>{feature}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
+
 							{/* Tech Stack Breakdown */}
 							<div className="space-y-3 sm:space-y-4 border-t border-white/10 pt-4 sm:pt-5">
 								{frontend && frontend.length > 0 && (
@@ -155,21 +170,6 @@ function ProjectCard({ title, year, subtitle, preview, description, frontend, ba
 									</div>
 								)}
 							</div>
-
-							{/* Features */}
-							{features && features.length > 0 && (
-								<div className="border-t border-white/10 pt-4 sm:pt-5">
-									<h3 className="text-sm font-semibold text-slate-100 mb-3">Features:</h3>
-									<ul className="space-y-2">
-										{features.map((feature, index) => (
-											<li key={index} className="flex gap-2 text-sm text-slate-300">
-												<span className="text-cyan-400 flex-shrink-0">•</span>
-												<span>{feature}</span>
-											</li>
-										))}
-									</ul>
-								</div>
-							)}
 
 							{/* Action Buttons */}
 							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-white/10">
