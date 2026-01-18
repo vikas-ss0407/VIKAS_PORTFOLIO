@@ -30,8 +30,8 @@ function App() {
       {/* Content */}
       <div className="relative z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(94,234,212,0.08),transparent_25%),radial-gradient(circle_at_80%_0%,rgba(129,140,248,0.08),transparent_20%),radial-gradient(circle_at_50%_80%,rgba(248,113,113,0.08),transparent_22%)]">
         <Navbar />
-        <main className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-16 pt-32 sm:px-10 sm:pt-28 lg:px-12 lg:pt-24">
-          <About />
+        <About />
+        <main className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-16 sm:px-10 lg:px-12">
           <Skills />
           <Projects />
           <Certifications />

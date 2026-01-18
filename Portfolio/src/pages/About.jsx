@@ -31,10 +31,9 @@ function About() {
 	}, [displayText, isDeleting]);
 
 	return (
-		<section id="about" className="scroll-mt-24">
-			<div className="glass-panel relative overflow-hidden rounded-2xl sm:rounded-3xl px-4 py-8 sm:px-10 lg:px-12 sm:py-10">
-				<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-indigo-500/5 to-transparent" aria-hidden />
-				<div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+		<section id="about" className="scroll-mt-0 min-h-screen flex items-center justify-center px-4 py-8 sm:px-10 lg:px-12">
+			<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-indigo-500/5 to-transparent" aria-hidden />
+			<div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center w-full max-w-6xl">
 					<div className="order-2 lg:order-1 space-y-4 sm:space-y-6 text-center lg:text-left">
 					<h1 className="text-4xl text-white sm:text-5xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-indigo-200 to-cyan-100 animate-slideIn animate-glow">
 						Hi, I am Vikas
@@ -71,7 +70,6 @@ function About() {
 						</div>
 					</div>
 				</div>
-			</div>
 		</section>
 	);
 }
